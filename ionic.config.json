@@ -1,0 +1,7 @@
+{
+  "name": "Seminarioll",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
