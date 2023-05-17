@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Preferences } from '@capacitor/preferences';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public router:Router) {}
 
-}
+async  cerrar(){
+    await Preferences.remove({ key: 'token' });
+    this.router.navigate(['/sesion'])
+  }
+  }
