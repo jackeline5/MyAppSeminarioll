@@ -88,7 +88,7 @@ pagar(){
         this.factura.vendedorId=data.data
        })
 
-      this.router.navigate(['/home'])
+     
     }
 
 }
