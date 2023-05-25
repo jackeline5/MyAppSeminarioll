@@ -74,7 +74,8 @@ export class RegistrarFacturaPage implements OnInit {
 //aquí paga lo añadido y lo manda al servicio
 pagar(){
   //crea  la fecha
-  this.factura.fecha=""+this.fecha.getDate()+"/"+this.fecha.getMonth()+1+"/"+this.fecha.getFullYear()
+  this.factura.fecha=""+this.fecha.getDate()+"/"+(this.fecha.getMonth()+1)+"/"+this.fecha.getFullYear()
+  console.log(this.factura.fecha)
   this.facturaService.Crearfactura(this.factura)
   this.router.navigate(['/home/lista-facturas'])
 
